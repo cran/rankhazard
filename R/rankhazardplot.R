@@ -1,0 +1,3 @@
+`rankhazardplot` <-
+function(...) UseMethod("rankhazardplot")
+
