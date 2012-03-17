@@ -1,0 +1,8 @@
+9ac5d9010c5f95789f67a579546eb31b *DESCRIPTION
+df390c53434517b304ac5db487184641 *NAMESPACE
+4013c373bab1226083c6b113e70b7cb1 *R/rankhazardplot.R
+8f880cd4bba88ef628dfa2bdc5af9dff *R/rankhazardplot.coxph.R
+4a676cbc11422f71e2f3087c76c84b42 *R/rankhazardplot.cph.R
+d047f77f73f9baefc2306a26d482e23b *R/rankhazardplot.default.R
+1ac797c00090c849d5730209026c83b6 *man/rankhazard-package.Rd
+1eeb906a3297c3b357831c3aa9658189 *man/rankhazardplot.Rd

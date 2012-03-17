@@ -10,15 +10,15 @@
 }
 \usage{
 rankhazardplot(...)
-rankhazardplot.coxph(coxphobj,refvalues=NULL,x=NULL,legendtext=NULL,axistext=NULL,plottype="hazard",...)
-rankhazardplot.cph(cphobj,refvalues=NULL,x=NULL,legendtext=NULL,axistext=NULL,plottype="hazard",...)
-rankhazardplot.default(x,coefs=NULL,xp=NULL,refvalues=NULL,legendtext=NULL,axistext=NULL,plottype="hazard",col=NULL,pch=NULL,lwd=1,...)
+\method{rankhazardplot}{coxph}(coxphobj,refvalues=NULL,x=NULL,legendtext=NULL,axistext=NULL,plottype="hazard",...)
+\method{rankhazardplot}{cph}(cphobj,refvalues=NULL,x=NULL,legendtext=NULL,axistext=NULL,plottype="hazard",...)
+\method{rankhazardplot}{default}(x,coefs=NULL,xp=NULL,refvalues=NULL,legendtext=NULL,axistext=NULL,plottype="hazard",col=NULL,pch=NULL,lwd=1,...)
 }
 
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{coxphobj}{An object of class 'coxph' (survival).}
-  \item{cphobj}{An object of class 'cph' (Design).}
+  \item{cphobj}{An object of class 'cph' (rms).}
   \item{refvalues}{A vector of reference values given in the same order as the covariates in the model. If \code{NULL}, the medians of each covariate are used.  }
   \item{x}{A matrix or data frame of the covariate data. Needed if the \code{coxphobj$x} or \code{cphobj$x} does not exist.}  
   \item{legendtext}{A vector of covariate names for the legend box. If \code{NULL}, the column names are from \code{x}, \code{coxphobj$x} or \code{cphobj$x}.}
@@ -32,7 +32,7 @@ rankhazardplot.default(x,coefs=NULL,xp=NULL,refvalues=NULL,legendtext=NULL,axist
 \item{\dots}{ Other arguments to passed to the plotting commands. }
 }
 \details{
-  The function receives a coxph (package survival) object or a cph (package Design) object as an argument and creates a rank-hazard plot of the 
+  The function receives a coxph (package survival) object or a cph (package rms) object as an argument and creates a rank-hazard plot of the 
 covariates. The reference values for the relative hazards and legend texts can be provided as optional arguments. Plotting parameters such as, lwd, lty, col and pch
 are passed to the plotting commands.
 }

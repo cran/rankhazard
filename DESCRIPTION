@@ -1,11 +1,12 @@
 Package: rankhazard
 Type: Package
 Title: Rank-hazard plots
-Version: 0.8
-Date: 2009-06-29
+Version: 0.8-1
+Date: 2012-03-17
 Author: Juha Karvanen
 Maintainer: Juha Karvanen <juha.karvanen@iki.fi>
-Requires: Design, survival
+Depends: survival
+Suggests: rms
 Description: Rank-hazard plots (Karvanen and Harrell, Statistics in
         Medicine 2009) visualize the relative importance of covariates
         in a proportional hazards model. The key idea is to rank the
@@ -25,6 +26,6 @@ Description: Rank-hazard plots (Karvanen and Harrell, Statistics in
         covariates can be also compared using rank-hazard plots.
 License: GPL-2
 LazyLoad: yes
-Packaged: 2009-06-29 07:58:47 UTC; jkau
+Packaged: 2012-03-18 15:38:27 UTC; Q
 Repository: CRAN
-Date/Publication: 2009-06-29 09:40:07
+Date/Publication: 2012-03-25 12:12:20

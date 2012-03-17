@@ -14,7 +14,7 @@ Date: \tab 2009-06-29\cr
 License: \tab GPL 2\cr
 LazyLoad: \tab yes\cr
 }
-The function rankhazardplot receives a coxph (package survival) object or a cph (package Design) object as an argument and creates a rank-hazard plot of the 
+The function rankhazardplot receives a coxph (package survival) object or a cph (package rms) object as an argument and creates a rank-hazard plot of the 
 covariates. The reference values for the relative hazards and legend texts can be provided as optional arguments. Plotting parameters such as, lwd, lty, col and pch
 are passed to the plotting commands.
 }
