@@ -301,6 +301,7 @@ data(pbc)
 # new status variable
 pbc$statusbin <- ifelse(pbc$status==0, 0, NA)
 pbc$statusbin <- ifelse(pbc$status==2, 1, pbc$statusbin)
+pbc$edema2 <- as.factor(pbc$edema)
 
 ### different ways to make a rank-hazard plot ###
 par(mar = c(4, 5, 4, 2) + 0.1)
@@ -311,7 +312,7 @@ rankhazardplot(coxmodel1, data = pbc, main = "Rank-hazardplot by coxphobj")
 
 dd <- datadist(pbc)
 options(datadist = 'dd')
-cmodel1 <- cph(Surv(time, statusbin) ~ age + protime + as.factor(edema),
+cmodel1 <- cph(Surv(time, statusbin) ~ age + protime + edema2,
     data = pbc, x = TRUE)
 rankhazardplot(cmodel1, data = pbc, main = "Rank-hazardplot by cphobj")
 
