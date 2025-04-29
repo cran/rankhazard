@@ -19,18 +19,18 @@ also compared using rank-hazard plots.
 \tabular{ll}{
 Package: \tab rankhazard\cr
 Type: \tab Package\cr
-Version: \tab 1.1.0\cr
-Date: \tab 2016-05-10\cr
+Version: \tab 1.1.1\cr
+Date: \tab 2025-04-28\cr
 License: \tab GPL 2\cr
 LazyLoad: \tab yes\cr
 }
-The function \code{rankhazardplot} receives a \code{\link{coxph}} (package \code{survival}) object or a \code{cph} 
+The function \code{rankhazardplot} receives a \code{\link[survival]{coxph}} (package \code{survival}) object or a \code{cph} 
 (package \code{rms}) object as an argument and creates a rank-hazard plot of the covariates.  
 The reference points for the relative hazards and legend texts can be provided as optional arguments.  
 Plotting parameters such as, lwd, lty, col and pch are passed to the plotting commands.  
 }
 \author{
-Juha Karvanen <juha.karvanen@iki.fi> , Nanni Koski <nanni.koski@gmail.com> 
+Juha Karvanen <juha.karvanen@iki.fi> , Nanni Ultima <nanni.ultima@gmail.com> 
 }
 \references{Karvanen J., Harrell F. E., Jr. 2009 Visualizing covariates in proportional hazards model. 
 \emph{Statistics in Medicine}, \bold{28}, 1957--1966.}

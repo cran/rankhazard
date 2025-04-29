@@ -8,7 +8,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \description{
 Creates a rank-hazard plot.  Plots the relative hazards (or the logarithm of the relative hazards) 
-for each covariate of a Cox proportional hazards model fitted by \code{\link{coxph}} or \code{cph}. 
+for each covariate of a Cox proportional hazards model fitted by \code{\link[survival]{coxph}} or \code{cph}. 
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usage{
@@ -54,7 +54,7 @@ rankhazardplot(...)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \arguments{
 
- \item{coxphobj}{An object of class \code{coxph} created by function \code{\link{coxph}} from the package \code{survival}.  
+ \item{coxphobj}{An object of class \code{coxph} created by function \code{\link[survival]{coxph}} from the package \code{survival}.  
 The object should have been created with \code{x = TRUE}.  Otherwise \code{x_CI} must be given.  }
 
  \item{cphobj}{An object of class \code{cph} created by function \code{cph} from the package \code{rms}.  
@@ -246,7 +246,7 @@ For example \code{main}.  Arguments that are already in use are \code{x}, \code{
 
 \details{
 
-The function \code{rankhazardplot} receives a \code{\link{coxph}} (package \code{survival}) object or a \code{cph} 
+The function \code{rankhazardplot} receives a \code{\link[survival]{coxph}} (package \code{survival}) object or a \code{cph} 
 (package \code{rms}) object as an argument and creates a rank-hazard plot of the covariates.  
 The reference points for the relative hazards and legend texts can be provided as optional arguments.  
 Plotting parameters such as, lwd, lty, col and pch are passed to the plotting commands. 
@@ -262,10 +262,10 @@ However, if the number of the obervations is even, the default reference point i
 as it is calculated as a mean of two middle observations.  Hence, the median shown on the x-axis and the reference point 
 can differ even when the default is used. 
 
-Predictions are computed by \code{\link{predict.coxph}}, when the function is called with the argument \code{coxphobj} 
+Predictions are computed by \code{\link[survival]{predict.coxph}}, when the function is called with the argument \code{coxphobj} 
 and by \code{predict.rms}, when the function is called with the argument \code{cphobj}.  
-Consequently, relative hazards are available for models that are supported by \code{\link{predict.coxph}} or
-\code{predict.rms}.  For example the \code{\link{pspline}} transforms are supported by \code{\link{predict.coxph}} 
+Consequently, relative hazards are available for models that are supported by \code{\link[survival]{predict.coxph}} or
+\code{predict.rms}.  For example the \code{pspline} transforms are supported by \code{\link[survival]{predict.coxph}} 
 but not by \code{predict.rms}.
 
 The upper and lower confidence limits of the Cox regression coefficients are used to calculate 
@@ -293,11 +293,11 @@ For example the medians of every covariate at the first measurement.
 \item{x}{A data frame that contains the covariate data.  }
 
 \item{xp}{A data frame that contains the centered predictions for all covariates in the model.  
-Calculated by \code{\link{predict.coxph}} or \code{predict.rms}.  }
+Calculated by \code{\link[survival]{predict.coxph}} or \code{predict.rms}.  }
 
 \item{refvalues}{ A vector that contains the centered predictions that are calculated using the reference point defaults for 
 the covariates that don't have a given reference point.  
-Calculated by \code{\link{predict.coxph}} or \code{predict.rms}.  }
+Calculated by \code{\link[survival]{predict.coxph}} or \code{predict.rms}.  }
 
 \item{confinterval}{A list that contains covariate data as a data frame \code{x}, predictions by terms as a data frame \code{xp},
 reference values as a vector \code{refvalues}, a lower confidence interval for the predictions as a data frame \code{low}, 
@@ -316,9 +316,9 @@ NB: values aren't centered and for that reason e.g. \code{xp} and \code{confinte
 \references{Karvanen J., Harrell F. E., Jr. 2009 Visualizing covariates in proportional hazards model. 
 \emph{Statistics in Medicine}, \bold{28}, 1957--1966.}
 %%%%%%%%%%%%%%%
-\author{Juha Karvanen <juha.karvanen@iki.fi>, Nanni Koski <nanni.koski@gmail.com>}
+\author{Juha Karvanen <juha.karvanen@iki.fi>, Nanni Ultima <nanni.ultima@gmail.com>}
 %%%%%%%%%%%%%%%
-\seealso{ \code{\link{coxph}},  \code{cph},\code{\link{predict.coxph}}, \code{predict.rms} }
+\seealso{ \code{\link[survival]{coxph}},  \code{cph},\code{\link[survival]{predict.coxph}}, \code{predict.rms} }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \examples{
 library(survival)
